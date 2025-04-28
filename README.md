@@ -28,7 +28,6 @@ This project showcases my skills, projects, certifications, and contact informat
 
 - **GitHub:** [@rana-huzaifa-12](https://github.com/rana-huzaifa-12)
 - **LinkedIn:** [linkedin.com/in/rana-huzaifa](www.linkedin.com/in/raj-huzaifa) 
-- **Location:** Lahore, Pakistan
 - **Portfolio:** [Live Website Link](https://github.com/rana-huzaifa-12/portfolio.git)
-
+- **Location:** Lahore, Pakistan
 ## ❤️ Thanks 
