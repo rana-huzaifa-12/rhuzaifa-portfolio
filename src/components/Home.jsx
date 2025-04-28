@@ -144,7 +144,9 @@ const Home = () => {
                         </section>
 
                         <button className="bg-blue-500 text-white px-4 py-2 rounded-full  sm:ml-2 sm:px-5 sm:py-2.5 md:px-8 md:py-3 hover:bg-blue-900 hover:scale-105 transition-all duration-300 ease-in-out shadow-sm shadow-black">
-                            <a href="/path/to/resume.pdf" download>
+                            <a
+                                href="/MyResume.pdf"
+                                download>
                                 Download Resume
                             </a>
                         </button>
