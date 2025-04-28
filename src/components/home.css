@@ -1,0 +1,32 @@
+ @keyframes spin-border {
+     0% {
+         border-color: #FF6347;
+         /* Tomato */
+     }
+
+     25% {
+         border-color: #FFD700;
+         /* Gold */
+     }
+
+     50% {
+         border-color: rgb(86, 86, 222);
+         /* Lime Green */
+     }
+
+     75% {
+         border-color: yellow;
+         /* Dodger Blue */
+     }
+
+     100% {
+         border-color: #FF6347;
+         /* Tomato */
+     }
+ }
+
+ .spinning-border {
+     animation: spin-border 3s linear infinite !important;
+     border-style: dotted;
+
+ }
