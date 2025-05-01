@@ -2,6 +2,12 @@ import React from "react";
 
 const projects = [
     {
+        "title": "Quick Bite - Food Delivery ",
+        "description": "Quick Bite is a user-friendly food delivery web application built with React.js, Redux, and styled using Tailwind CSS.",
+        "link": "https://quick-bite-126.netlify.app/"
+    }
+    ,
+    {
         title: "To-Do List App",
         description: "A simple task management app built with React and Tailwind CSS.",
         link: "https://github.com/rana-huzaifa-12/ToDo-App",
@@ -20,11 +26,6 @@ const projects = [
         title: "Weather App",
         description: "Get real-time weather updates using a weather API, built with React.",
         link: "https://github.com/rana-huzaifa-12/check-weather",
-    },
-    {
-        title: "X Clone",
-        description: "A sleek and modern clone of X (Twitter) using React and Tailwind.",
-        link: "https://github.com/rana-huzaifa-12/X-Signin",
     },
     {
         title: "Portfolio Website",
