@@ -30,7 +30,7 @@ const projects = [
     {
         title: "Portfolio Website",
         description: "My personal portfolio to showcase skills and projects using React.",
-        link: "https://github.com/rana-huzaifa-12/rhuzaifa-portfolio",
+        link: "https://rana-huzaifa-portfolio.netlify.app/",
     },
 ];
 
