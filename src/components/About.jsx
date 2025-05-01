@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "aos/dist/aos.css";
 import SplineScene from './ui/SplineScene';
 import { TypeAnimation } from 'react-type-animation';
+import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/24/solid';  // Import the arrow icons
 
 const About = () => {
+    // State to manage active accordion index
+    const [activeIndex, setActiveIndex] = useState(null);
+
+    // Toggle function for accordion
+    const toggleAccordion = (index) => {
+        setActiveIndex(activeIndex === index ? null : index);
+    };
+
     return (
         <section
             id="about"
@@ -43,34 +52,12 @@ const About = () => {
                     </p>
                 </div>
 
-                {/*  Education Section */}
+                {/* Education Section */}
                 <div className="relative mt-20 w-full flex flex-col md:flex-row gap-4" data-aos="fade-up" data-aos-delay="150">
-                    {/*  Floating Blobs Background */}
+                    {/* Floating Blobs Background */}
                     <div className="absolute inset-0 -z-10 pointer-events-none">
                         <svg
-                            className="absolute top-28 -left-35 w-96 h-96 text-yellow-400 opacity-20 blur-2xl animate-pulse z-100"
-                            viewBox="0 0 200 200"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                fill="currentColor"
-                                d="M48.2,-63.4C60.2,-53.7,66.4,-36.5,66.2,-21C66,-5.5,59.5,8.3,52.8,22.5C46.1,36.7,39.3,51.3,27.7,59.6C16.1,68,-0.2,70.2,-15.3,66.4C-30.3,62.5,-44.1,52.7,-53.1,39.9C-62.1,27.1,-66.4,11.3,-66.6,-4.9C-66.8,-21.1,-62.9,-37.7,-52.7,-47.7C-42.4,-57.7,-25.8,-61,-9,-63.4C7.8,-65.8,15.6,-67.1,48.2,-63.4Z"
-                                transform="translate(100 100)"
-                            />
-                        </svg>
-                        <svg
-                            className="absolute top-34 -left-35 w-96 h-96 text-pink-800 opacity-20 blur-2xl animate-pulse z-100"
-                            viewBox="0 0 200 200"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                fill="currentColor"
-                                d="M48.2,-63.4C60.2,-53.7,66.4,-36.5,66.2,-21C66,-5.5,59.5,8.3,52.8,22.5C46.1,36.7,39.3,51.3,27.7,59.6C16.1,68,-0.2,70.2,-15.3,66.4C-30.3,62.5,-44.1,52.7,-53.1,39.9C-62.1,27.1,-66.4,11.3,-66.6,-4.9C-66.8,-21.1,-62.9,-37.7,-52.7,-47.7C-42.4,-57.7,-25.8,-61,-9,-63.4C7.8,-65.8,15.6,-67.1,48.2,-63.4Z"
-                                transform="translate(100 100)"
-                            />
-                        </svg>
-                        <svg
-                            className="absolute top-64 -left-35 w-96 h-96 text-purple-400 opacity-20 blur-2xl animate-pulse z-100"
+                            className="absolute top-28 -left-35 w-96 h-96 text-yellow-700 opacity-20 blur-2xl animate-pulse z-100"
                             viewBox="0 0 200 200"
                             xmlns="http://www.w3.org/2000/svg"
                         >
@@ -84,7 +71,7 @@ const About = () => {
 
                     {/* Left: Heading */}
                     <div className="relative md:w-1/4 w-full flex justify-center items-center">
-                        <h3 className="text-3xl font-bold text-yellow-300 yellow-300 bg-transparent bg-opacity-30 backdrop-blur-2xl rounded-br-2xl rounded-tl-2xl p-4 border-white border-1 md:p-10 md:mr-20">
+                        <h3 className="text-3xl font-bold text-yellow-300 bg-transparent bg-opacity-30 backdrop-blur-2xl rounded-br-2xl rounded-tl-2xl p-4 border-white border-1 md:p-10 md:mr-20">
                             Education
                         </h3>
                     </div>
@@ -93,33 +80,75 @@ const About = () => {
                     <div className="relative md:w-3/4 w-full flex flex-col gap-8 z-10">
                         {/* Degree 1 */}
                         <div
-                            className="shadow-yellow-400/10 text-white rounded-2xl p-6 shadow-lg hover:shadow-yellow-400/40 hover:-translate-y-2 transition-all duration-300 border border-white-400/20"
+                            className="shadow-yellow-400/10 text-white rounded-2xl p-6 shadow-lg hover:shadow-yellow-400/40 hover:-translate-y-2 transition-all duration-300 border border-white-400/20 "
+                            onClick={() => toggleAccordion(0)}
                             data-aos="fade-up"
                             data-aos-delay="100"
                         >
-                            <h4 className="text-xl font-semibold text-yellow-200 mb-1">Bachelor in Computer Science</h4>
-                            <p className="text-md text-purple-200 mb-1">Education University, 2023 - 2027</p>
-                            <p className="text-md text-gray-300">Focus on Front-End Development, JavaScript, React.js.</p>
+                            <div className="flex justify-between items-center">
+                                <h4 className="text-xl font-semibold text-yellow-200 mb-1">Bachelor in Computer Science</h4>
+                                <span className="text-xl">
+                                    {activeIndex === 0 ? (
+                                        <ChevronUpIcon className="w-6 h-6 text-yellow-300" />
+                                    ) : (
+                                        <ChevronDownIcon className="w-6 h-6 text-yellow-300" />
+                                    )}
+                                </span>
+                            </div>
+                            {activeIndex === 0 && (
+                                <div className="mt-4">
+                                    <p className="text-md text-purple-200 mb-1">Education University, 2023 - 2027</p>
+                                    <p className="text-md text-gray-300">Focus on Front-End Development, JavaScript, React.js.</p>
+                                </div>
+                            )}
                         </div>
 
                         {/* Degree 2 */}
                         <div
                             className="shadow-yellow-400/10 text-white rounded-2xl p-6 shadow-lg hover:shadow-yellow-400/40 hover:-translate-y-2 transition-all duration-300 border border-white-400/20"
+                            onClick={() => toggleAccordion(1)}
                             data-aos="fade-up"
                             data-aos-delay="200"
                         >
-                            <h4 className="text-xl font-semibold text-yellow-200 mb-1">Intermediate in Pre-Engineering</h4>
-                            <p className="text-md text-purple-200">Punjab Group of Colleges, 2021 - 2023</p>
+                            <div className="flex justify-between items-center">
+                                <h4 className="text-xl font-semibold text-yellow-200 mb-1">Intermediate in Pre-Engineering</h4>
+                                <span className="text-xl">
+                                    {activeIndex === 1 ? (
+                                        <ChevronUpIcon className="w-6 h-6 text-yellow-300" />
+                                    ) : (
+                                        <ChevronDownIcon className="w-6 h-6 text-yellow-300" />
+                                    )}
+                                </span>
+                            </div>
+                            {activeIndex === 1 && (
+                                <div className="mt-4">
+                                    <p className="text-md text-purple-200">Punjab Group of Colleges, 2021 - 2023</p>
+                                </div>
+                            )}
                         </div>
 
                         {/* Degree 3 */}
                         <div
                             className="shadow-yellow-400/10 text-white rounded-2xl p-6 shadow-lg hover:shadow-yellow-400/40 hover:-translate-y-2 transition-all duration-300 border border-white-400/20"
+                            onClick={() => toggleAccordion(2)}
                             data-aos="fade-up"
                             data-aos-delay="300"
                         >
-                            <h4 className="text-xl font-semibold text-yellow-200 mb-1">Matriculation in Science</h4>
-                            <p className="text-md text-purple-200">Islamia School, 2019 - 2021</p>
+                            <div className="flex justify-between items-center">
+                                <h4 className="text-xl font-semibold text-yellow-200 mb-1">Matriculation in Science</h4>
+                                <span className="text-xl">
+                                    {activeIndex === 2 ? (
+                                        <ChevronUpIcon className="w-6 h-6 text-yellow-300" />
+                                    ) : (
+                                        <ChevronDownIcon className="w-6 h-6 text-yellow-300" />
+                                    )}
+                                </span>
+                            </div>
+                            {activeIndex === 2 && (
+                                <div className="mt-4">
+                                    <p className="text-md text-purple-200">Islamia School, 2019 - 2021</p>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>

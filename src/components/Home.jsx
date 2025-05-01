@@ -5,7 +5,7 @@ import { Modal, Button } from 'antd';
 import profilePic from "../assets/blue.jpg";
 import { TypeAnimation } from 'react-type-animation';
 import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
-import "./home.css"
+import "./home.css";
 
 const Home = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -34,7 +34,7 @@ const Home = () => {
             >
                 <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between w-full -mt-50 md:mt-0">
                     {/* Left Side - Text */}
-                    <div className="md:w-1/2 mb-10 md:mb-0 text-center md:text-left mt-20" data-aos="fade-up" data-aos-delay="10">
+                    <div className="md:w-1/2 mb-10 md:mb-0 text-center md:text-left mt-20 " data-aos="fade-up" data-aos-delay="10">
                         <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4">
                             Hey, I'm <span className="text-yellow-300">Rana Huzaifa</span>
                         </h1>
@@ -56,7 +56,6 @@ const Home = () => {
                             />
                         </p>
                         <p className="text-base sm:text-lg md:text-xl text-gray-300 mt-4 px-12 md:px-0">
-
                             <TypeAnimation
                                 sequence={[
                                     'I am a Front - End Developer who loves building beautiful and responsive web apps using React.',
@@ -67,20 +66,17 @@ const Home = () => {
                                 repeat={Infinity}
                                 className="text-white inline-block"
                             />
-
                         </p>
 
                         <Button
                             type="primary"
                             onClick={handleModalOpen} // Open Modal
-                            className="bg-blue-900 text-white px-8 py-3 my-10 rounded-full hover:bg-blue-900 hover:scale-105 transition-all duration-300 ease-in-out"
+                            className="bg-blue-900 text-white w-[140px] md:w-[] md:px-8 py-3 my-10 rounded-xl hover:bg-blue-900 hover:scale-105 transition-all duration-300 ease-in-out "
                         >
                             Read More
                         </Button>
 
-
                         {/* social media links/icons */}
-
                         <section className="min-h-10 flex items-center justify-start text-white py-4 hidden md:block mt-20">
                             <div className="flex space-x-6">
                                 <a href="https://www.facebook.com/share/1BDt43hqgW/" target="_blank" rel="noopener noreferrer">
@@ -91,8 +87,7 @@ const Home = () => {
                                         }}
                                         onMouseEnter={(e) =>
                                         (e.currentTarget.style.filter =
-                                            "drop-shadow(0 0 3px #3b82f6) drop-shadow(0 0 6px #3b82f6) drop-shadow(0 0 10px #3b82f6)")
-                                        }
+                                            "drop-shadow(0 0 3px #3b82f6) drop-shadow(0 0 6px #3b82f6) drop-shadow(0 0 10px #3b82f6)")}
                                         onMouseLeave={(e) => (e.currentTarget.style.filter = "none")}
                                     />
                                 </a>
@@ -105,8 +100,7 @@ const Home = () => {
                                         }}
                                         onMouseEnter={(e) =>
                                         (e.currentTarget.style.filter =
-                                            "drop-shadow(0 0 3px #ec4899) drop-shadow(0 0 6px #ec4899) drop-shadow(0 0 10px #ec4899)")
-                                        }
+                                            "drop-shadow(0 0 3px #ec4899) drop-shadow(0 0 6px #ec4899) drop-shadow(0 0 10px #ec4899)")}
                                         onMouseLeave={(e) => (e.currentTarget.style.filter = "none")}
                                     />
                                 </a>
@@ -119,8 +113,7 @@ const Home = () => {
                                         }}
                                         onMouseEnter={(e) =>
                                         (e.currentTarget.style.filter =
-                                            "drop-shadow(0 0 3px #ffffff) drop-shadow(0 0 6px #ffffff) drop-shadow(0 0 10px #ffffff)")
-                                        }
+                                            "drop-shadow(0 0 3px #ffffff) drop-shadow(0 0 6px #ffffff) drop-shadow(0 0 10px #ffffff)")}
                                         onMouseLeave={(e) => (e.currentTarget.style.filter = "none")}
                                     />
                                 </a>
@@ -133,25 +126,21 @@ const Home = () => {
                                         }}
                                         onMouseEnter={(e) =>
                                         (e.currentTarget.style.filter =
-                                            "drop-shadow(0 0 3px #1d4ed8) drop-shadow(0 0 6px #1d4ed8) drop-shadow(0 0 10px #1d4ed8)")
-                                        }
+                                            "drop-shadow(0 0 3px #1d4ed8) drop-shadow(0 0 6px #1d4ed8) drop-shadow(0 0 10px #1d4ed8)")}
                                         onMouseLeave={(e) => (e.currentTarget.style.filter = "none")}
                                     />
                                 </a>
-
-
                             </div>
                         </section>
 
-                        <button className="bg-blue-500 text-white px-4 py-2 rounded-full  sm:ml-2 sm:px-5 sm:py-2.5 md:px-8 md:py-3 hover:bg-blue-900 hover:scale-105 transition-all duration-300 ease-in-out shadow-sm shadow-black">
-                            <a
-                                href="/MyResume.pdf"
-                                download>
-                                Download Resume
-                            </a>
-                        </button>
-
-
+                        {/* Download Resume Button */}
+                        <div className="mt-5 md:mt-2">
+                            <button className="bg-blue-500 text-white px-4 py-2  rounded-md md:rounded-full sm:ml-2 sm:px-5 sm:py-2.5 md:px-8 md:py-3 hover:bg-blue-900 hover:scale-105 transition-all duration-300 ease-in-out shadow-sm shadow-black mt-4 sm:mt-6 md:mt-10">
+                                <a href="/MyResume.pdf" download>
+                                    Download Resume
+                                </a>
+                            </button>
+                        </div>
 
 
                     </div>
