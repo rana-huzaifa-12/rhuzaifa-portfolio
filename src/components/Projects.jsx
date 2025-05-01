@@ -10,7 +10,7 @@ const projects = [
     {
         title: "To-Do List App",
         description: "A simple task management app built with React and Tailwind CSS.",
-        link: "https://github.com/rana-huzaifa-12/ToDo-App",
+        link: "https://to-do-app-126.netlify.app/",
     },
     {
         title: "Quote Generator",
@@ -20,12 +20,12 @@ const projects = [
     {
         title: "BMI Calculator",
         description: "A simple Body Mass Index calculator built with React and styled-components.",
-        link: "https://github.com/rana-huzaifa-12/BMI-Calculator",
+        link: "https://bmi-calculator-126.netlify.app/",
     },
     {
         title: "Weather App",
         description: "Get real-time weather updates using a weather API, built with React.",
-        link: "https://github.com/rana-huzaifa-12/check-weather",
+        link: "https://check-weather-126.netlify.app/",
     },
     {
         title: "Portfolio Website",
