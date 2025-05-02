@@ -53,7 +53,7 @@ const About = () => {
                 </div>
 
                 {/* Education Section */}
-                <div className="relative mt-20 w-full flex flex-col md:flex-row gap-4" data-aos="fade-up" data-aos-delay="150">
+                <div className="relative mt-20 w-full flex flex-row gap-4" >
                     {/* Floating Blobs Background */}
                     <div className="absolute inset-0 -z-10 pointer-events-none">
                         <svg
@@ -69,21 +69,15 @@ const About = () => {
                         </svg>
                     </div>
 
-                    {/* Left: Heading */}
-                    <div className="relative md:w-1/4 w-full flex justify-center items-center">
-                        <h3 className="text-3xl font-bold text-yellow-300 bg-transparent bg-opacity-30 backdrop-blur-2xl rounded-br-2xl rounded-tl-2xl p-4 border-white border-1 md:p-10 md:mr-20">
-                            Education
-                        </h3>
-                    </div>
+
 
                     {/* Right: Degrees */}
-                    <div className="relative md:w-3/4 w-full flex flex-col gap-8 z-10">
+                    <div className="relative w-full flex flex-col gap-8 z-10">
                         {/* Degree 1 */}
                         <div
                             className="shadow-yellow-400/10 text-white rounded-2xl p-6 shadow-lg hover:shadow-yellow-400/40 hover:-translate-y-2 transition-all duration-300 border border-white-400/20 "
                             onClick={() => toggleAccordion(0)}
-                            data-aos="fade-up"
-                            data-aos-delay="100"
+
                         >
                             <div className="flex justify-between items-center">
                                 <h4 className="text-xl font-semibold text-yellow-200 mb-1">Bachelor in Computer Science</h4>
@@ -107,8 +101,7 @@ const About = () => {
                         <div
                             className="shadow-yellow-400/10 text-white rounded-2xl p-6 shadow-lg hover:shadow-yellow-400/40 hover:-translate-y-2 transition-all duration-300 border border-white-400/20"
                             onClick={() => toggleAccordion(1)}
-                            data-aos="fade-up"
-                            data-aos-delay="200"
+
                         >
                             <div className="flex justify-between items-center">
                                 <h4 className="text-xl font-semibold text-yellow-200 mb-1">Intermediate in Pre-Engineering</h4>
@@ -131,8 +124,7 @@ const About = () => {
                         <div
                             className="shadow-yellow-400/10 text-white rounded-2xl p-6 shadow-lg hover:shadow-yellow-400/40 hover:-translate-y-2 transition-all duration-300 border border-white-400/20"
                             onClick={() => toggleAccordion(2)}
-                            data-aos="fade-up"
-                            data-aos-delay="300"
+
                         >
                             <div className="flex justify-between items-center">
                                 <h4 className="text-xl font-semibold text-yellow-200 mb-1">Matriculation in Science</h4>

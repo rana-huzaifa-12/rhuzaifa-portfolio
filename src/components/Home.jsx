@@ -29,8 +29,7 @@ const Home = () => {
             <section
                 className="min-h-200 md:min-h-180 flex items-center justify-center bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 text-white px-4 "
                 id="home"
-                data-aos="fade-up"
-                data-aos-delay="200"
+
             >
                 <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between w-full -mt-50 md:mt-0">
                     {/* Left Side - Text */}
@@ -151,8 +150,7 @@ const Home = () => {
                             src={profilePic}
                             alt="Huzaifa"
                             className="w-40 h-40 sm:w-52 sm:h-52 md:w-72 md:h-72 md:mt-12 object-cover rounded-full border-4 border-purple-300 shadow-lg shadow-black hover:shadow-xl hover:translate-y-1 transition-transform duration-900 spinning-border"
-                            data-aos="fade-up"
-                            data-aos-delay="10"
+
                         />
                     </div>
                 </div>

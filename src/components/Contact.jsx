@@ -1,16 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useState } from 'react';
 import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => {
-    useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            once: true,
-        });
-    }, []);
-
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -18,7 +9,7 @@ const Contact = () => {
     });
 
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const [submittedName, setSubmittedName] = useState(''); // NEW state to store the submitted name
+    const [submittedName, setSubmittedName] = useState('');
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -30,9 +21,9 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setSubmittedName(formData.name); // Save the name before clearing
+        setSubmittedName(formData.name);
         setIsSubmitted(true);
-        setFormData({ name: '', email: '', message: '' }); // Now clear the form
+        setFormData({ name: '', email: '', message: '' });
     };
 
     return (
@@ -43,7 +34,6 @@ const Contact = () => {
 
                     {/* Contact Boxes */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
-                        {/* Box 1 */}
                         <div className="bg-gradient-to-br from-gray-700 to-gray-800 p-8 rounded-2xl shadow-2xl hover:scale-105 transform transition duration-500 ease-in-out">
                             <h3 className="text-2xl font-bold mb-4 text-center text-purple-400">Development</h3>
                             <p className="text-gray-300 leading-relaxed text-center">
@@ -53,7 +43,6 @@ const Contact = () => {
                             </p>
                         </div>
 
-                        {/* Box 2 */}
                         <div className="bg-gradient-to-br from-gray-700 to-gray-800 p-8 rounded-2xl shadow-2xl hover:scale-105 transform transition duration-500 ease-in-out">
                             <h3 className="text-2xl font-bold mb-4 text-center text-purple-400">Future Goal</h3>
                             <p className="text-gray-300 leading-relaxed text-center">
@@ -62,7 +51,6 @@ const Contact = () => {
                             </p>
                         </div>
 
-                        {/* Box 3 */}
                         <div className="bg-gradient-to-br from-gray-700 to-gray-800 p-8 rounded-2xl shadow-2xl hover:scale-105 transform transition duration-500 ease-in-out">
                             <h3 className="text-2xl font-bold mb-6 text-center text-purple-400">Connect with Me</h3>
                             <div className="text-gray-300 leading-relaxed text-left space-y-4">
@@ -136,7 +124,7 @@ const Contact = () => {
                         </form>
                     </div>
 
-                    {/* Contact Information */}
+                    {/* Contact Info & Socials */}
                     <div className="text-center text-gray-300">
                         <h3 className="text-3xl font-bold mb-4 text-center text-purple-400 py-4">Get In Touch</h3>
 
@@ -144,12 +132,11 @@ const Contact = () => {
                             <a href='tel:+923245898647' className="mb-4"><strong className="text-purple-400">Phone:</strong> +92 3245898647</a>
                             <div className="mb-4">
                                 <strong className="text-purple-400">Email:</strong>
-                                <a href="mailto:ranarajpoot1266@gmail.com" className="text-white hover:underline"> ranarajpoot1266@gmail.com</a>
+                                <a href="mailto:ranarajpoot1266@gmail.com" className="text-white hover:underline text-sm md:text-md"> ranarajpoot1266@gmail.com</a>
                             </div>
                         </div>
 
-                        {/* Social Media Icons */}
-                        <section className="min-h-10 flex items-center justify-center text-white hidden md:flex py-2">
+                        <section className="min-h-10 flex items-center justify-center text-white md:flex py-2">
                             <div className="flex space-x-6">
                                 <a href="https://www.facebook.com/share/1BDt43hqgW/" target="_blank" rel="noopener noreferrer">
                                     <FaFacebook className="text-3xl text-blue-600 transition-all duration-300 hover:scale-110" />
@@ -170,7 +157,6 @@ const Contact = () => {
                             <p>&copy; 2025 <span className="text-purple-400">RANA HUZAIFA</span> All Rights Reserved.</p>
                         </div>
                     </div>
-
                 </div>
             </section>
         </div>
