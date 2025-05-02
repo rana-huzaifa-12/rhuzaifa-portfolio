@@ -1,25 +1,24 @@
 import React from 'react';
-import video from "../assets/vid1.mp4";
+
 import { AccordionDemo } from "./ui/Accordion";
 import ZdogCanvas from "./ui/ZdogScene";
+// Import all images
+import nature1 from "../assets/nature1.jpg";
+import nature2 from "../assets/nature2.jpg";
+import nature3 from "../assets/nature3.jpg";
+import nature4 from "../assets/nature4.jpg";
 
 function Vd() {
     return (
-        <div className="relative w-full min-h-screen overflow-hidden">
-            {/* Video Background */}
-            <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="absolute top-0 left-0 w-full h-full object-cover"
-            >
-                <source src={video} type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-
+        <div
+            className="w-full min-h-3/5  bg-cover bg-center animate-background relative"
+            style={{
+                backgroundImage: `url(${nature1})`, // Initial background image
+                animation: "backgroundChange 16s infinite", // Apply the animation
+            }}
+        >
             {/* Overlay */}
-            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
+            <div className="absolute inset-0 bg-black opacity-75"></div> {/* Dark overlay */}
 
             {/* Content */}
             <div className="relative z-20 flex flex-col items-center justify-center w-full h-full px-4 py-30">
@@ -45,5 +44,18 @@ function Vd() {
         </div>
     );
 }
+
+// CSS Keyframe Animation in the Same Component
+const style = document.createElement("style");
+style.innerHTML = `
+@keyframes backgroundChange {
+    0% { background-image: url(${nature1}); }
+    25% { background-image: url(${nature2}); }
+    50% { background-image: url(${nature3}); }
+    75% { background-image: url(${nature4}); }
+    100% { background-image: url(${nature1}); }
+}
+`;
+document.head.appendChild(style);
 
 export default Vd;
