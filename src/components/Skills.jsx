@@ -1,9 +1,9 @@
 import React from 'react';
 import './skills.css';
-import { TypeAnimation } from 'react-type-animation';
 import profilePic from "../assets/1.jpg";
-import AOS from "aos";
 import "aos/dist/aos.css";
+import { FaFaceSmileWink } from "react-icons/fa6";
+
 
 // Import images
 import htmlImg from '../assets/h5.jpeg';
@@ -55,7 +55,7 @@ function Skills() {
 
             {/* circular frames skills */}
 
-            <div className="flex flex-wrap justify-center gap-8 mt-32" data-aos="fade-up" data-aos-delay="300">
+            <div className="flex flex-wrap justify-center gap-8 mt-32" data-aos="fade-up" data-aos-delay="50">
                 {skillsData.map((skill, index) => (
                     <div
                         key={index}
@@ -71,33 +71,13 @@ function Skills() {
                 ))}
             </div>
 
-            {/* typing animation */}
-
-            <h3 className="text-2xl font-bold text-center text-yellow-300 mt-20 mb-12" >
-
-                <TypeAnimation
-                    sequence={[
-                        'Swipe Right to See Details',
-                        2000,
-                        'hey user!',
-                        2000,
-                        'Swipe Right to See Details',
-                        2000,
-                    ]}
-                    wrapper="span"
-                    speed={50}
-                    repeat={Infinity}
-                    className="text-yellow-300 inline-block"
-                />
-
-            </h3>
 
             {/* horizontal scrolling cards */}
 
             <div
                 className="flex flex-col md:flex-row gap-6 md:gap-4 items-center md:items-stretch md:overflow-x-scroll scrollbar-hidden mt-12"
                 data-aos="fade-up"
-                data-aos-delay="200"
+                data-aos-delay="50"
             >
                 {skillsData.map((skill, index) => (
                     <div
@@ -132,6 +112,10 @@ function Skills() {
                     </div>
                 ))}
             </div>
+
+
+
+
 
 
 

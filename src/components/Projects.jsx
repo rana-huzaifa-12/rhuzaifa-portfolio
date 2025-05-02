@@ -3,7 +3,7 @@ import React from "react";
 const projects = [
     {
         "title": "Quick Bite - Food Delivery ",
-        "description": "Quick Bite is a user-friendly food delivery web application built with React.js, Redux, and styled using Tailwind CSS.",
+        "description": "Quick Bite is a user-friendly food delivery web application built with React.js, Redux.",
         "link": "https://quick-bite-126.netlify.app/"
     }
     ,
